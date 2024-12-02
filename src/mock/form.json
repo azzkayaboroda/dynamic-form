@@ -1,0 +1,91 @@
+{
+    "title": "Динамическая форма",
+    "controls": [
+        {
+            "id": "5927943491",
+            "control": "FORM",
+            "caption": "Динамическая форма"
+        },
+        {
+            "control": "LABEL",
+            "caption": "Введите текст",
+            "target": "5927943492"
+        },
+        {
+            "id": "5927943492",
+            "control": "TEXT",
+            "caption": "Текстовое поле",
+            "required": true,
+            "tabindex": 1
+        },
+        {
+            "id": "59279434977",
+            "control": "SELECT",
+            "caption": "Выберите значение",
+            "options": [
+                {
+                    "value": "option1",
+                    "label": "Опция 1"
+                },
+                {
+                    "value": "option2",
+                    "label": "Опция 2"
+                }
+            ]
+        },
+        {
+            "id": "5927943498",
+            "control": "RADIO",
+            "caption": "Выберите вариант",
+            "options": [
+                {
+                    "value": "yes",
+                    "label": "Да"
+                },
+                {
+                    "value": "no",
+                    "label": "Нет"
+                }
+            ]
+        },
+        {
+            "id": "5927943495",
+            "control": "CHECKBOX",
+            "caption": "Подтвердите согласие",
+            "required": true
+        },
+        {
+            "id": "5927943497",
+            "control": "TEXT",
+            "caption": "Поле для подтверждённого согласия",
+            "visibilityDependsOn": {
+                "controlId": "5927943495",
+                "value": true
+            },
+            "tabindex": 1
+        },
+        {
+            "id": "5927943496",
+            "control": "TEXT",
+            "caption": "Скрытое поле",
+            "required": true,
+            "visibilityDependsOn": {
+                "controlId": "5927943497",
+                "value": "yes"
+            }
+        },
+        {
+            "id": "5927943493",
+            "control": "BUTTON",
+            "caption": "OK",
+            "type": "submit"
+        },
+        {
+            "id": "5927943494",
+            "control": "BUTTON",
+            "caption": "Очистить",
+            "type": "button"
+        }
+    ],
+    "submitUrl": "/api/submitForm"
+}
